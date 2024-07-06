@@ -13,5 +13,8 @@ def index():
     random_meme = random.choice(meme_images)  # Select a random meme
     return render_template('index.html', meme_url=random_meme)  # Pass the selected meme to the template
 
+# if __name__ == '__main__':
+#     app.run(debug=True)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=8080, debug=True)
